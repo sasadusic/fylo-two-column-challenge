@@ -1,0 +1,367 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+    */
+    #root, #__next {
+    isolation: isolate;
+  }
+  :root{
+    /* Primary */
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+    
+    /* Accent  */
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Bright-Blue-hover: hsl(224, 93%, 70%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+  --Moderate-Cyan-2: hsl(170, 45%, 70%);
+  
+  /* Neutral  */
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+}
+.attribution { 
+  font-size: 14px; 
+  text-align: center;
+  padding: 16px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue); 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+p{
+  font-size: 16px;
+}
+.small{
+  font-size: 12px;
+  color: #000;
+  margin-top: 12px;
+}
+h1, h2, h3, .btn, .link{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+a{
+  text-decoration: none;
+}
+.btn{
+  border: none;
+  outline-color: transparent;
+  border-radius: 4px;
+  background: var(--Bright-Blue);
+  color: var(--Light-Grayish-Blue);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 60px;
+}
+.btn:hover{
+  background-color: var(--Bright-Blue-hover);
+}
+.heading{
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+.header{
+  padding: 80px;
+  color: var(--Very-Dark-Blue);
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 60px;
+}
+.link{
+  color: var(--Very-Dark-Blue);
+  font-weight: 40;
+  margin-left: 40px;
+}
+.hero{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero-left{
+  width: 50%;
+}
+.hero-right{
+  width: 50%;
+}
+.hero-form{
+  margin-top: 18px;
+  width: 100%;
+}
+.input{
+  border: none;
+  outline: none;
+  padding: 9px;
+  font-size: 14px;
+  width: max(50%, 300px);
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+.border{
+  border: 1px solid var(--Very-Dark-Blue);
+}
+.prod{
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Very-Dark-Blue);
+}
+.prod-left{
+  width: 55%;
+}
+.prod-right{
+  width: 45%;
+}
+.sub-header{
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+.prod .phar{
+  margin-bottom: 18px;
+}
+.prod-link{
+  display: flex;
+  align-items: center;
+  color: var(--Moderate-Cyan);
+  border-bottom: 1px solid var(--Moderate-Cyan);
+  width: max-content;
+  margin-bottom: 32px;
+}
+.prod-link:hover{
+  color: var(--Moderate-Cyan-2);
+}
+.link-image{
+  margin-left: 8px;
+}
+.test{
+  width: 50%;
+  padding: 24px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.profile{
+  display: flex;
+  align-items: center;
+}
+.profile-image{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.name{
+  font-size: 12px;
+  font-weight: 700;
+}
+.role{
+  font-size: 10px;
+}
+.access{
+  padding: 80px;
+  background-color: var(--Desaturated-Blue);
+  color: var(--Light-Gray);
+  display: flex;
+  gap: 10vw;
+}
+.access .sub-header{
+  color: var(--Light-Grayish-Blue);
+}
+.access-left{
+  width: 50%;
+}
+.access-right{
+  width: 50%;
+}
+.access-input{
+  border: none;
+  outline: none;
+  padding: 9px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.footer{
+  padding: 80px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue);
+}
+.footer-grid{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+.footer-logo{
+  margin-bottom: 24px;
+}
+.footer-link{
+  color: var(--Light-Gray);
+  display: block;
+  margin-bottom: 8px;
+}
+.footer-icon{
+  color: var(--Light-Grayish-Blue);
+  padding: 6px 8px;
+  border: 1px solid var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  margin-left: 12px;
+}
+.footer-link:hover{
+  color: var(--Desaturated-Blue);
+} 
+.footer-icon:hover{
+  color: var(--Desaturated-Blue);
+  border: 1px solid var(--Desaturated-Blue);
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (width < 1200px)  {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width < 992px) {
+  .header{
+    padding: 24px;
+  }
+  .heading{
+    font-size: 28px;
+    text-align: center;
+  }
+  .sub-header{
+    font-size: 22px;
+    text-align: center;
+  }
+  .hero{
+    flex-direction:column-reverse;
+    text-align: center;
+  }
+  .hero-form{
+    padding: 12px;
+  }
+  .link{
+    font-size: 12px;
+    margin-left: 24px;
+  }
+  .logo{
+    height: 24px;
+  }
+  .prod{
+    padding: 24px;
+    flex-direction:column-reverse;
+  }
+  .access{
+    padding: 60px 40px;
+    flex-direction: column;
+  }
+  .footer{
+    padding: 80px 40px 40px 40px;
+  }
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+  .item{
+    margin-bottom: 40px;
+  }
+  .item-4{
+    display: flex;
+    justify-content: center;
+  }
+  .footer-icon{
+    padding: 6px 10px;
+    margin: 0 8px;
+  }
+  .hero-left{
+    width: 100%;
+  }
+  .hero-right{
+    width: 100%;
+    margin-top: 80px;
+  }
+  .prod-left{
+    width: 100%;
+  }
+  .prod-right{
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  .prod-link{
+    margin: 0 auto 40px;  
+}
+  .access-left{
+    width: 100%;
+  }
+  .access-right{
+    width: 100%;
+    padding: 0 24px;
+  }
+  .test{
+    width: 90%;
+    margin: 0 12px 60px 12px;
+    margin: 0 auto 60px auto;
+  }
+  .input{
+    width: 100%;
+  }
+  .access-input{
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+    padding: 12px 0;
+    font-size: 12px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width < 768px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width < 576px) {}
